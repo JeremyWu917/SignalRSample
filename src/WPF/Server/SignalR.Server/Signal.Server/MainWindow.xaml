@@ -1,0 +1,40 @@
+﻿<Window
+    x:Class="SignalR.Server.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="WPF SignalR Server"
+    Width="343  "
+    Height="319">
+    <Grid>
+
+        <Button
+            x:Name="ButtonStart"
+            Width="100"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="ButtonStart_Click"
+            Content="Start" />
+        <Button
+            x:Name="ButtonStop"
+            Width="100"
+            Margin="225,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="ButtonStop_Click"
+            Content="Stop"
+            IsEnabled="False" />
+        <RichTextBox
+            x:Name="RichTextBoxConsole"
+            Width="315"
+            Height="243"
+            Margin="10,35,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <FlowDocument>
+                <Paragraph />
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+</Window>

@@ -1,0 +1,67 @@
+﻿<Window
+    x:Class="SignalR.Client.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="WPF SignalR Client"
+    Width="517"
+    Height="552"
+    MinWidth="517"
+    MinHeight="552"
+    Closing="WPFClient_Closing"
+    ResizeMode="CanMinimize">
+    <Grid>
+        <StackPanel
+            x:Name="SignInPanel"
+            MaxWidth="550"
+            Margin="10,0">
+            <Label Content="Enter user name:" />
+            <Grid>
+                <TextBox
+                    x:Name="UserNameTextBox"
+                    Height="20"
+                    Margin="0,0,80,0" />
+                <Button
+                    x:Name="SignInButton"
+                    Width="75"
+                    HorizontalAlignment="Right"
+                    Click="SignInButton_Click"
+                    Content="Sign In" />
+            </Grid>
+
+            <Label
+                x:Name="StatusText"
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                Visibility="Collapsed" />
+        </StackPanel>
+        <StackPanel
+            x:Name="ChatPanel"
+            MaxWidth="550"
+            Margin="10"
+            Visibility="Collapsed">
+            <Grid>
+                <TextBox
+                    x:Name="TextBoxMessage"
+                    Height="20"
+                    Margin="0,0,80,0"
+                    TextWrapping="Wrap" />
+                <Button
+                    x:Name="ButtonSend"
+                    Width="75"
+                    Height="20"
+                    HorizontalAlignment="Right"
+                    Click="ButtonSend_Click"
+                    Content="Send"
+                    IsDefault="True"
+                    IsEnabled="False" />
+            </Grid>
+            <RichTextBox
+                x:Name="RichTextBoxConsole"
+                Height="461"
+                Margin="0,10"
+                HorizontalAlignment="Left"
+                IsReadOnly="True"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" />
+        </StackPanel>
+    </Grid>
+</Window>
